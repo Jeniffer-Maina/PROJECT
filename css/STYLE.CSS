@@ -8,7 +8,7 @@ body {
 }
 
 h1, h2, h3 {
-    color: #1a4732;
+    color: #471a43;
     margin-bottom: 0.5em;
 }
 
@@ -65,6 +65,44 @@ a {
     background: #e6f4ea;
 }
 
+/* Mobile Navigation */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+}
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+}
+
 /* Hero Section */
 .hero {
     background: url('../assets/financial 2.jpg') center center/cover no-repeat;
@@ -97,13 +135,18 @@ a {
 
 
 /* How We Operate */
-.how-we-operate {
-    text-align: center;
-    padding: ;
-}
 
-.how-we-operate span{
-    color: black;
+ 
+.how-we-operate-container{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 32px;
+    padding: 25px;
+    margin: 3em auto;
+    max-width: 900px;  
 }
 
 .how-illustration-bg {
@@ -114,12 +157,70 @@ a {
     align-items: center;
     justify-content: center;
 }
+
+.how-we-operate-left {
+    flex: 1 1 320px;
+    min-width: 320px;
+    max-width: 600px;
+}
+.how-label {
+    font-size: 0.85em;
+    color: #183a2f;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+    display: inline-block;
+}
+.how-we-operate-left h2 {
+    font-size: 2.2em;
+    color: #183a2f;
+    margin-bottom: 0.6em;
+}
+.how-we-operate-left p {
+    font-size: 1.1em;
+    color: #183a2f;
+    margin-bottom: 2em;
+}
+.how-we-operate-left .btn {
+    background: #2ecc71;
+    color: #fff;
+    border-radius: 24px;
+    padding: 0.8em 2em;
+    font-weight: 600;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.how-we-operate-left .btn:hover,
+.how-it-works-left .btn:focus {
+    background: midnightblue;
+}
+.how-we-operate-right {
+    flex: 1 1 320px;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+}
+.how-illustration-bg {
+    background: #0d4740;
+    border-radius:25px ;
+    padding: 0px;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+}
+.how-illustration-img {
+    width: 390px;
+    border-radius: 10px;
+    display: column;
+  
+}
 /* Services */
 
-
-.services-section {
+.services {
   text-align: center;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -130,13 +231,13 @@ a {
   margin-bottom: 0.5em;
 }
 
-.services-section h2 {
+.services h2 {
   font-size: 2.2em;
   font-weight: 700;
   margin-bottom: 0.5em;
 }
 
-.services-section h2 span {
+.services h2 span {
   color: #104336;
 }
 
@@ -146,11 +247,27 @@ a {
   margin-bottom: 2em;
 }
 
-.services-grid {
+.products-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5em;
   justify-content: center;
+}
+
+
+.products-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.Specialized-Financial-Products,
+.Loans {
+  flex: 1 1 300px;
+  max-width: 900px;
+  
 }
 
 .card {
@@ -186,30 +303,49 @@ a {
   opacity: 0.9;
 }
 
-.mindfulness {
-  background-color: #899cdb;
-  position: relative;
-}
-.therapy{
-    background-color:darkgrey;
-}
 
-
-.card-wide {
-    background-color: #fcebd7;
-    max-width: 1200px;
-    height: 30vh;
-    margin:  auto auto;
-    border-radius: 25px;
-    text-align: left;
-    padding-left: 20px;
-  flex: 1 1 100%;
+.Specialized{
+  background-color: rgb(132, 133, 135);
+  max-width: 420px;
+  height: 30vh;
+  border-radius: 25px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  box-shadow: 20px;
+}
+.Loans {
+  background-color: thistle;
+  max-width: 450px;
+  height: 30vh;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  box-shadow: 20px;
+}
+
+
+.Products-Reasoning {
+  background-color: lightslategray;
+  max-width: 900px;
+  height: 30vh;
+  margin: 0 auto 2em;
+  border-radius: 25px;
+  text-align: left;
+  padding-left: 20px;
+  display: flex;
+  flex: 1 1 100%;
   flex-direction: row;
   justify-content: space-between;
   gap: 2em;
   align-items: center;
 }
+
 
 .card-wide div {
   max-width: 60%;
@@ -218,11 +354,11 @@ a {
 .card-wide img {
   width: 120px;
   border-radius: 20px;
-}
 
+}
 .btn-outline {
   border: 2px solid #183a2f;
-  background: none;
+  background: transparent;
   color: #183a2f;
   padding: 0.5em 1.2em;
   border-radius: 999px;
@@ -263,7 +399,6 @@ a {
 
 
 
-
 /* Testimonials */
 body {
   font-family: 'Inter', sans-serif;
@@ -277,7 +412,7 @@ body {
   flex-direction: column;
   padding: 3em 1em;
   background-color: #e6f4ea;
-  max-width: 1200px;
+  max-width: 900px;
   margin: auto;
   border-radius: 25px;
 }
@@ -296,7 +431,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  max-width: 1200px;
+  max-width: 900px;
   padding-left: 0%; /* margin: 0 auto; */
   gap: 3em;
   flex-wrap: wrap;
@@ -397,6 +532,33 @@ body {
 }
 
 
+/* Partners */
+.partners {
+ display: flex;
+ flex-direction: column;
+ align-items: center; 
+ justify-content: flex-start;
+ padding: 3em 1em;
+ background-color: white;
+ max-width: 900px;
+ margin: auto;
+ border-radius: 25px;
+ height: 8vh; 
+}
+
+        
+.partners h3 {
+ margin-bottom: 1rem;
+ align-self: flex-start; /* Align heading to the start of the column */
+
+ }
+        
+ .partner-logos {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center; /* Align logos to the start */
+ gap: 2rem;
+ }
 
 
 /* Resources */
@@ -404,7 +566,7 @@ body {
     padding: 3em 1em;
     background: whitesmoke;
     text-align: center;
-    max-width: 1200px; 
+    max-width: 900px; 
     margin: auto;
     border-radius: 25px; 
 }
@@ -438,7 +600,7 @@ body {
     flex-direction: column;
     align-items:flex-start; 
     justify-content:left;
-    max-width: 1200px;
+    max-width: 900px;
     height: 30vh;
     border-radius: 25px;
     margin: auto auto;
@@ -455,7 +617,7 @@ body {
     box-shadow: 0 2px 16px rgba(30, 80, 60, 0.06);
     padding: 3em 2em;
     margin: 3em auto;
-    max-width: 1100px;
+    max-width: 900px;
     flex-wrap: wrap;
 }
 .faq-left {
@@ -533,25 +695,64 @@ body {
     padding: 1em 1.5em;
 }
 
-/* Contact Section */
+
+/* Customercare Section */
+
+
 .customercare {
-    background: whitesmoke;
-    
-    padding: 3em 1em;
-    margin:auto;
-    border-radius: 0px;
+    background: linear-gradient(135deg, #e6f4ea 60%, #f8f9fa 100%);
+    padding: 3em 2em;
+    margin: 3em auto;
+    border-radius: 32px;
     display: flex;
     flex-direction: column;
-    align-items:center; 
-    justify-content:center;
-    height: 20vh;
-
-   
-
+    align-items: center;
+    justify-content: center;
+    height: 22vh;
+    max-width: 900px;
+    box-shadow: 0 4px 24px rgba(30, 80, 60, 0.08);
+    text-align: center;
 }
+
+.customercare h2 {
+    font-size: 2.5em;
+    color: #183a2f;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.customercare p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 1.5em;
+    max-width: 600px;
+}
+
+.customercare .btn {
+    background: #183a2f;
+    color: #fff;
+    border-radius: 24px;
+    padding: 0.8em 2.2em;
+    font-weight: 600;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 1em;
+}
+
+.customercare .btn:hover,
+.customercare .btn:focus {
+    background: #27ae60;
+}
+
+
+/* Contact Section */
+
 .contact-container {
     background: #f7faf9;
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
     border-radius: 25px;
     display: flex;
@@ -594,11 +795,15 @@ body {
 
 /* Footer */
 footer {
-    background: #183a2f;
+    background: #2c3e50;
     color: #fff;
     padding: 2em 0 0.5em 0;
-    margin-top: 3em;
+    margin-top: 10px;
+    max-width: 900px; 
+    margin: auto;
+    border-radius: 25px;
 }
+
 .footer-container {
     display: flex;
     justify-content: center;
@@ -632,156 +837,6 @@ footer {
     font-size: 0.95em;
     color: #b2dfdb;
     margin-top: 1em;
-}
-
-/* How We Operate / How It Works - Financial Theme */
-.how-we-operate-container {
-    display: flex;
-    align-items: center;
-    gap: 3em;
-    flex-wrap: wrap;
-    justify-content: center;
-    background: #fff;
-    border-radius: 32px;
-    padding: 2.5em 2em;
-    margin: 3em auto;
-    max-width: 950px;
-}
-.how-we-operate-left {
-    flex: 1 1 320px;
-    min-width: 320px;
-    max-width: 400px;
-}
-.how-label {
-    font-size: 0.85em;
-    color: #2471A3;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 1em;
-    display: inline-block;
-}
-.how-we-operate-left h2 {
-    font-size: 2.2em;
-    color: #183a2f;
-    margin-bottom: 0.6em;
-}
-.how-we-operate-left p {
-    font-size: 1.1em;
-    color: #183a2f;
-    margin-bottom: 2em;
-}
-.how-we-operate-left .btn {
-    background: #2ecc71;
-    color: #fff;
-    border-radius: 24px;
-    padding: 0.8em 2em;
-    font-weight: 600;
-    font-size: 1em;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-.how-we-operate-left .btn:hover,
-.how-it-works-left .btn:focus {
-    background: #27ae60;
-}
-.how-we-operate-right {
-    flex: 1 1 320px;
-    min-width: 320px;
-    display: flex;
-    justify-content: center;
-}
-.how-illustration-bg {
-    background: #0d4740;
-    border-radius: 36px;
-    padding: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.how-illustration-img {
-    width: 260px;
-    border-radius: 24px;
-    background: #fbeedc;
-}
-
-/* Services Section - Financial Theme */
-.services-label {
-    display: block;
-    color: #2471A3;
-    font-size: 0.85em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 1em;
-    text-align: center;
-}
-.services.finance-services {
-    background: #f7faf9;
-    padding: 3em 1em;
-    text-align: center;
-}
-.services.finance-services h2 {
-    font-size: 2.2em;
-    color: #183a2f;
-    margin-bottom: 0.6em;
-}
-.services.finance-services p {
-    color: #183a2f;
-    margin-bottom: 2.5em;
-}
-.service-cards-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    justify-content: center;
-}
-.service-card {
-    border-radius: 32px;
-    box-shadow: 0 2px 8px rgba(30, 80, 60, 0.04);
-    padding: 2.5em 2em 2em 2em;
-    text-align: left;
-    position: relative;
-    min-width: 320px;
-    max-width: 400px;
-    flex: 1 1 320px;
-    background: #fff;
-    margin-bottom: 1em;
-}
-.service-card-lg {
-    width: 350px;
-    min-height: 260px;
-}
-.service-card-wide {
-    flex-basis: 100%;
-    order: 3;
-}
-.service-illustration {
-    position: absolute;
-    right: 2em;
-    bottom: 2em;
-    width: 80px;
-    opacity: 0.7;
-}
-.service-illustration-right {
-    width: 120px;
-    margin-left: auto;
-    opacity: 0.8;
-}
-.btn-outline {
-    background: none;
-    color: #183a2f;
-    border: 2px solid #183a2f;
-    border-radius: 24px;
-    padding: 0.6em 2em;
-    font-weight: 600;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 1.2em;
-    transition: background 0.2s, color 0.2s;
-}
-.btn-outline:hover, .btn-outline:focus {
-    background: #e6f4ea;
-    color: #2471A3;
 }
 
 /* Responsive Design */

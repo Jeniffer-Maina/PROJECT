@@ -32,3 +32,75 @@
   border-radius: 8px;
   max-width: 55%;
 }
+
+
+
+
+
+
+.services-section {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.services-section h2 {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.services-section h2 span {
+  color: #104336;
+}
+
+.span {
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  color: #444;
+  margin-bottom: 0.5em;
+}
+
+.description {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 2em;
+}
+
+.products-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.Specialized-Financial-Products,
+.Loans {
+  flex: 1 1 300px;
+  max-width: 600px;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 20vh;
+}
+
+.Products-Reasoning {
+  background-color: lightslategray;
+  max-width: 900px;
+  height: 20vh;
+  margin: 0 auto 2em auto;
+  border-radius: 25px;
+  text-align: left;
+  padding-left: 20px;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2em;
+  align-items: center;
+}
