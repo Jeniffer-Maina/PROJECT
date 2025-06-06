@@ -1,6 +1,6 @@
- FINAL PROJECT: MERLIN CORPORATION  
+ ## FINAL PROJECT: MERLIN CORPORATION  
 
-About
+## About
 
 Guidance for Your Financial Well-being 
 
@@ -8,11 +8,11 @@ Empowering your financial decisions through expert guidance and accessible tools
 
   
 
-Overview 
+## Overview 
 
 Merlin is a professional, client-centered platform that connects individuals with financial advisors and analysts. Designed to improve your financial literacy and well-being, Merlin offers expert services, insightful resources, and a welcoming community—all from one seamless interface. 
 
-Languages Used 
+## Languages Used 
 
 HTML – Semantic structure 
 
@@ -24,7 +24,7 @@ CSS – Custom design and layout
 
 JavaScript – Dynamic components (FAQ toggles, navigation) 
 
-Features 
+## Features 
 
 1.Hero	Section 
 
@@ -80,7 +80,7 @@ Simple contact form for inquiries
 
  
 
-📁 Project Structure 
+## 📁 Project Structure 
 Merlin/ 
 ├── index.html 
 ├── css/ 
