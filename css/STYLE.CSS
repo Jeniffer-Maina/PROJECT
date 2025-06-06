@@ -65,6 +65,18 @@ a {
     background: #e6f4ea;
 }
 
+.nav-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #183a2f;
+    text-decoration: none;
+    height:40px; 
+    vertical-align:middle;
+     margin-right:8px;
+     max-width: 25px;
+   text-align: center;
+    justify-content: center;
+}
 /* Mobile Navigation */
 .nav-toggle {
     display: none;
@@ -267,6 +279,8 @@ a {
 .Loans {
   flex: 1 1 300px;
   max-width: 900px;
+  padding:10px;
+  display: flex;
   
 }
 
@@ -314,6 +328,7 @@ a {
   justify-content: space-between;
   padding-left: 20px;
   box-shadow: 20px;
+  padding-bottom: 10px;
 }
 .Loans {
   background-color: #98b2be;
@@ -336,19 +351,21 @@ a {
 }
 
 .Products.Reasoning {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: #f7faf9;
   border-radius: 25px;
   padding: 2em;
-  display: flex;
-  flex-direction: column;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  align-items: flex-start;
-  text-align: left; 
-  height: 30vh;  
+  gap: 2em;
+  height: 30vh;
+  max-width: 900px;
+  margin: auto;
 }
 
 .Reasoning img {
-  width: 120px;
+  width: 250px;
   border-radius: 20px;
   justify-content: right;
 
@@ -797,7 +814,7 @@ a {
 
 /* Footer */
 footer {
-    background: ;
+   
     color: navy;
     padding: 2em 0 0.5em 0;
     margin-top: 10px;
@@ -896,3 +913,108 @@ footer {
 }
 
 
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero {
+    padding: 40px 10px;
+    height: auto;
+    margin: 100px 10px 2em 10px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .how-we-operate-container {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .how-we-operate-left, .how-we-operate-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .how-illustration-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .products-row {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .Specialized, .Loans {
+    width: 100%;
+    height: auto;
+    padding: 1em;
+  }
+
+  .Products.Reasoning {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  .Products.Reasoning img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .testimonials-grid {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .testimonials-left, .testimonials-cards {
+    width: 100%;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .partners {
+    height: auto;
+    padding: 2em 1em;
+  }
+
+  .resource-grid {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .faq-container {
+    flex-direction: column;
+    padding: 2em 1em;
+  }
+
+  .faq-left, .faq-right {
+    width: 100%;
+  }
+
+  .customercare {
+    padding: 2em 1em;
+    height: auto;
+  }
+}
