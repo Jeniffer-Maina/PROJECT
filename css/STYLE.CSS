@@ -271,8 +271,7 @@ a {
 }
 
 .card {
-  background-color: whitesmoke;
-  border-radius: 24px;
+  border-radius: 25px;
   padding: 2em;
   flex: 1 1 300px;
   min-width: 280px;
@@ -305,7 +304,7 @@ a {
 
 
 .Specialized{
-  background-color: rgb(132, 133, 135);
+  background-color: #D3D3D3;
   max-width: 420px;
   height: 30vh;
   border-radius: 25px;
@@ -317,7 +316,7 @@ a {
   box-shadow: 20px;
 }
 .Loans {
-  background-color: thistle;
+  background-color: #98b2be;
   max-width: 450px;
   height: 30vh;
   border-radius: 25px;
@@ -327,28 +326,24 @@ a {
   justify-content: space-between;
   padding-left: 20px;
   box-shadow: 20px;
+  padding-bottom: 30px; 
 }
 
+.Loans .btn {
+  margin-top: auto;
+  margin-bottom: 20px; 
 
-.Products-Reasoning {
-  background-color: lightslategray;
-  max-width: 900px;
-  height: 30vh;
-  margin: 0 auto 2em;
+}
+
+.Products.Reasoning {
+  background-color: #f7faf9;
   border-radius: 25px;
-  text-align: left;
-  padding-left: 20px;
+  padding: 2em;
   display: flex;
-  flex: 1 1 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 2em;
-  align-items: center;
-}
-
-
-.card-wide div {
-  max-width: 60%;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  align-items: flex-start; /* Push contents to the left */
+  text-align: left;   
 }
 
 .card-wide img {
@@ -411,10 +406,14 @@ body {
   display: flex;
   flex-direction: column;
   padding: 3em 1em;
-  background-color: #e6f4ea;
+  background-color: #C0C0C0;
   max-width: 900px;
   margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 16px rgba(30, 80, 60, 0.06);
   border-radius: 25px;
+  
 }
 
 .testimonials-span {
@@ -438,9 +437,8 @@ body {
 }
 
 .testimonials-left {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
+  flex: 1 1 300px;
+  min-width: 250px;
   
   
 
@@ -455,6 +453,7 @@ body {
 .testimonials-left p {
   color: #00332e;
   margin-bottom: 1.5rem;
+  
 }
 
 .testimonial-nav {
@@ -488,9 +487,12 @@ body {
 
 .testimonials-cards {
   display: flex;
-  flex: 2;
+  flex-direction: column; /* Stack testimonial cards vertically */
+  flex: 1 1 300px;
   gap: 2rem;
-  flex-wrap: nowrap;
+  min-width: 300px;
+  align-items: flex-end; /* Align cards to the right */
+  flex: nowrap;
 }
 
 .testimonial-card {
@@ -539,7 +541,7 @@ body {
  align-items: center; 
  justify-content: flex-start;
  padding: 3em 1em;
- background-color: white;
+ background-color: #BFC1C2;
  max-width: 900px;
  margin: auto;
  border-radius: 25px;
@@ -574,7 +576,7 @@ body {
     display: flex;
     gap: 2em;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: row;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -636,6 +638,7 @@ body {
 .faq-illustration {
     margin-top: 2em;
     text-align: left;
+    
 }
 .faq-right {
     flex: 2 1 400px;
@@ -892,3 +895,5 @@ footer {
         padding: 1.5em 0.5em;
     }
 }
+
+
