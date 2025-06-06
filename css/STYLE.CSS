@@ -19,7 +19,7 @@ a {
 
 
 .btn {
-    background: lightseagreen;
+    background: midnightblue;
     color: #fff;
     padding: 0.7em 2em;
     border-radius: 24px;
@@ -33,7 +33,7 @@ a {
     margin-top: 1em;
 }
 .btn:hover, .btn:focus {
-    background: darkgreen;
+    background: orangered;
 }
 
 /* Navbar */
@@ -182,7 +182,7 @@ a {
     margin-bottom: 2em;
 }
 .how-we-operate-left .btn {
-    background: #2ecc71;
+    background:midnightblue;
     color: #fff;
     border-radius: 24px;
     padding: 0.8em 2em;
@@ -194,7 +194,7 @@ a {
 }
 .how-we-operate-left .btn:hover,
 .how-it-works-left .btn:focus {
-    background: midnightblue;
+    background: orange;
 }
 .how-we-operate-right {
     flex: 1 1 320px;
@@ -317,7 +317,7 @@ a {
 }
 .Loans {
   background-color: #98b2be;
-  max-width: 450px;
+  max-width: 420px;
   height: 30vh;
   border-radius: 25px;
   display: flex;
@@ -326,12 +326,12 @@ a {
   justify-content: space-between;
   padding-left: 20px;
   box-shadow: 20px;
-  padding-bottom: 30px; 
+  padding-bottom: 10px; 
 }
 
 .Loans .btn {
   margin-top: auto;
-  margin-bottom: 20px; 
+  margin-bottom: 10px; 
 
 }
 
@@ -342,19 +342,21 @@ a {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  align-items: flex-start; /* Push contents to the left */
-  text-align: left;   
+  align-items: flex-start;
+  text-align: left; 
+  height: 30vh;  
 }
 
-.card-wide img {
+.Reasoning img {
   width: 120px;
   border-radius: 20px;
+  justify-content: right;
 
 }
 .btn-outline {
   border: 2px solid #183a2f;
-  background: transparent;
-  color: #183a2f;
+  background: midnightblue;
+  color: white;
   padding: 0.5em 1.2em;
   border-radius: 999px;
   cursor: pointer;
@@ -363,12 +365,12 @@ a {
 }
 
 .btn-outline:hover {
-  background: #183a2f;
+  background: orangered;
   color: white;
 }
 
 .btn-solid {
-  background-color: #183a2f;
+  background-color: midni;
   color: white;
   padding: 0.6em 1.4em;
   border: none;
@@ -395,23 +397,16 @@ a {
 
 
 /* Testimonials */
-body {
-  font-family: 'Inter', sans-serif;
-  
-  margin: auto;
-  ;
-}
 
 .testimonials {
   display: flex;
   flex-direction: column;
   padding: 3em 1em;
-  background-color: #C0C0C0;
+  background-color: whitesmoke;
   max-width: 900px;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 16px rgba(30, 80, 60, 0.06);
   border-radius: 25px;
   
 }
@@ -574,7 +569,7 @@ body {
 }
 .resource-grid {
     display: flex;
-    gap: 2em;
+    gap: 4em;
     justify-content: center;
     flex-direction: row;
     margin-top: 20px;
@@ -585,7 +580,7 @@ body {
     border-radius: 18px;
     box-shadow: 0 2px 8px rgba(30, 80, 60, 0.04);
     padding: 2em 1.5em;
-    width: 300px;
+    width: 270px;
     min-height: 180px;
     display: flex;
     flex-direction: column;
@@ -703,17 +698,17 @@ body {
 
 
 .customercare {
-    background: linear-gradient(135deg, #e6f4ea 60%, #f8f9fa 100%);
-    padding: 3em 2em;
-    margin: 3em auto;
-    border-radius: 32px;
+    background: whitesmoke;
+    padding: 10px;
+    margin: auto;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 22vh;
+    height: 30vh;
     max-width: 900px;
-    box-shadow: 0 4px 24px rgba(30, 80, 60, 0.08);
+    
     text-align: center;
 }
 
@@ -754,24 +749,26 @@ body {
 /* Contact Section */
 
 .contact-container {
-    background: #f7faf9;
+    background: #F0F0F0;
+    box-shadow: 10px;
     max-width: 900px;
     margin: auto;
     border-radius: 25px;
     display: flex;
     gap: 3em;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-top: 2em;
+    margin-bottom: 30px;
 }
 .contact-info, .contact-form {
-    background: #f7faf9;
+    background: #F0F0F0;
      min-width: 300px;
     flex: 1 1 320px;
-    
+    padding: 10px;
 }
 .contact-form form {
-    background-color: beige;
+    background-color: white;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
@@ -784,9 +781,9 @@ body {
    text-decoration: underline;          /* Basic underline */
    text-decoration-color: black;        /* Change color */
   text-decoration-thickness: 1px;     /* Change thickness */
-   text-underline-offset: 1px;         /* Adjust spacing */
+  text-underline-offset: 2px;         /* Adjust spacing */
     font-size: 1em;
-    background: beige;
+    background: white;
     color: #183a2f;
     resize: none;
 }
@@ -794,12 +791,14 @@ body {
     border-color: #27ae60;
     outline: none;
 }
-
+.btn-outline{
+  background-color: midnightblue;
+}
 
 /* Footer */
 footer {
-    background: #2c3e50;
-    color: #fff;
+    background: ;
+    color: navy;
     padding: 2em 0 0.5em 0;
     margin-top: 10px;
     max-width: 900px; 
@@ -827,7 +826,7 @@ footer {
     margin-bottom: 0.7em;
 }
 .footer-links a {
-    color: #fff;
+    color: navy;
     opacity: 0.9;
     transition: opacity 0.2s;
 }
@@ -838,7 +837,7 @@ footer {
 .copyright {
     text-align: center;
     font-size: 0.95em;
-    color: #b2dfdb;
+    color: navy;
     margin-top: 1em;
 }
 
